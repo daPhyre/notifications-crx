@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Options - Notifications</title>
+<style type="text/css">
+html, body{margin:0;padding:0}
+body{font-family:'Liberation Sans', Helvetica, Arial, sans-serif}
+h1,h2{font-family:'Liberation Serif', Times, 'Times New Roman', serif}
+h1{color:#fff;background:#096;margin:0;padding:0 1em}
+h2{padding:0 2em}
+p{padding:0 2em;font-size:0.9em}
+</style>
+<script type="text/javascript" src="options.js"></script>
+</head>
+
+<body>
+<h1><img src="icon.png" alt="[icon]" /> Notifications</h1>
+<h2>Options</h2>
+<p><label>If there are messages, open:<br/>
+http://ayotli.com/<input type="text" id="pathNew" oninput="enableSave()" /></label> [default: notifications]</p>
+<p><label>If there are no messages, open:<br/>
+http://ayotli.com/<input type="text" id="pathZero" oninput="enableSave()" /></label> [default: empty]</p>
+<!--p><label><input type="checkbox" id="useHttps" onclick="enableSave()" /> Use https instead of http.</label> [default: no]</p-->
+<p><label><input type="checkbox" id="alwaysNew" onclick="enableSave()" /> Always open on a new tab.</label> [default: no]</p>
+<p><label><input type="checkbox" id="showZero" onclick="enableSave()" /> On zero messages, show "0".</label> [default: no]</p>
+<p><label><input type="checkbox" id="playSound" onclick="enableSave()" /> On new messages, play a sound.</label> [default: yes]</p>
+<p><label><input type="checkbox" id="showNoti" onclick="enableSave()" /> On new messages, show desktop notifications.</label> [default: yes]</p>
+<p>Close desktop notification after (seconds): <input type="text" id="timeNoti" oninput="enableSave()" /> (zero is never). [default: 20]</p>
+<p>Refresh interval (minutes):<input type="text" id="refreshInterval" oninput="enableSave()" /> [default: 5]</p>
+<p><button type="button" id="saveButton" onclick="save()" />Save</button></p>
+<h2>Optional Permissions</h2>
+<p><label><input type="checkbox" id="useBg" onclick="setUseBg()" /> Run this extension on background (Keeps working even after closing Google Chrome).</label></p>
+<h2>License</h2>
+<p><a href="LICENSE.txt">License</a>, ©2011-2012 daPhyre.</p>
+<p>See the base sourcecode at <a href="http://github.com/daPhyre/notifications-crx">http://github.com/daPhyre/notifications-crx</a>.</p>
+</body>
+</html>
