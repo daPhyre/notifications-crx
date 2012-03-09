@@ -102,7 +102,11 @@ function tabCallback(tab){
 
 function openUrl(uri){
 	chrome.windows.getAll({populate:true},function(windows){
-		if(!alwaysNew){
+		if(windows.length<1){
+			chrome.windows.create({url:uri,focused:true});
+			return;
+		}
+		else if(!alwaysNew){
 			for(var i=0;i<windows.length;i++){
 				var tabs=windows[i].tabs;
 				for(var j=0;j<tabs.length;j++){
@@ -113,10 +117,6 @@ function openUrl(uri){
 					}
 				}
 			}
-		}
-		if(windows.length<1){
-			chrome.windows.create({url:uri,focused:true});
-			return;
 		}
 		chrome.tabs.getSelected(null,function(tab){
 			if(tab.url=='chrome://newtab/')
