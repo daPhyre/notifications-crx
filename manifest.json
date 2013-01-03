@@ -1,0 +1,25 @@
+{
+	"name": "Notifications (Demo)",
+	"version": "2.0",
+	"manifest_version": 2,
+	"description": "Codebase for notifications for Google Chrome, by Ayotli",
+	"homepage_url": "http://ayotli.com/notifications/",
+	"background": {
+		"scripts": ["background.js"] },
+	"options_page": "options.html",
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png" },
+	"browser_action": {
+		"default_title": "Notifications",
+		"default_icon": "icon.png" },
+	"web_accessible_resources": [
+		"icon48.png" ],
+	"permissions": [
+		"tabs",
+		"notifications",
+		"http://ayotli.com/" ],
+	"optional_permissions": [
+		"background" ]
+}
