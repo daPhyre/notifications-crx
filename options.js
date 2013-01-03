@@ -1,6 +1,7 @@
 function $(id){return document.getElementById(id);}
 function enableSave(){$('saveButton').disabled=false;}
 function disableSave(){$('saveButton').disabled=true;}
+<<<<<<< HEAD
 window.onload=function(){
 	$('pathNew').addEventListener('input',enableSave);
 	$('pathZero').addEventListener('input',enableSave);
@@ -16,6 +17,9 @@ window.onload=function(){
 	$('useBg').addEventListener('click',setUseBg);
 	init();
 }
+=======
+window.onload=init;
+>>>>>>> 3fdda02da19b7cc684cee20092de2585ccb87ac2
 
 function init(){
 	$('pathNew').value=(localStorage.pathNew||localStorage.pathNew=='')?localStorage.pathNew:'notifications';
@@ -50,6 +54,7 @@ function save(){
 	chrome.extension.getBackgroundPage().init();
 }
 
+<<<<<<< HEAD
 function clear(){
 	if(confirm('Restore all data to default?\nThis can\'t be undone...')){
 		localStorage.clear();
@@ -57,6 +62,8 @@ function clear(){
 	}
 }
 
+=======
+>>>>>>> 3fdda02da19b7cc684cee20092de2585ccb87ac2
 function setUseBg(){
 	if($('useBg').checked)
 		chrome.permissions.request({permissions:['background']});

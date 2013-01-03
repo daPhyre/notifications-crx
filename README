@@ -2,13 +2,21 @@
 
 Source code base to create notification extensions for Google Chrome. You can find more information and a ready to install example at http://ayotli.com/notifications/
 
+<<<<<<< HEAD
 To customize this code for your own extension, you just have to modify from background.js lines 1 to 3, and modify or rewrite lines 32 to 47, this last depending on the page resources.
+=======
+To personalize for your own extension, you just have to modify from background.js lines 1 to 3, and modify or rewrite lines 32 to 47, this last depending on the page resources.
+>>>>>>> 3fdda02da19b7cc684cee20092de2585ccb87ac2
 
 You might also want to comment and uncomment some lines in options.html and options.js (https option is commented by default since most pages don't use it, and to serve as example).
 
 Also, don't forget to change in options.html the sitename in lines 21 and 23, as well as default pages in the same lines.
 
 Questions, Suggestions, Gratifications*?
+<<<<<<< HEAD
 Contact the developer at ext@jugaa.me
+=======
+Contact the developer at crx@ayotli.com
+>>>>>>> 3fdda02da19b7cc684cee20092de2585ccb87ac2
 
 *(As in simple thanks or whatever you wish =D)
